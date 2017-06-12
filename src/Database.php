@@ -8,6 +8,7 @@ use Yaoi\Database\Settings;
 use Yaoi\Database\Contract as DatabaseContract;
 use Yaoi\Database\Query;
 use Yaoi\Log;
+use Yaoi\Mock;
 use Yaoi\Mappable\Contract;
 use Yaoi\Service;
 use Yaoi\Sql\Batch;
@@ -153,7 +154,7 @@ class Database extends Service implements DatabaseContract
      * @param $expression
      * @param null $binds
      * @return SimpleExpression
-     * @throws Sql\Exception
+     * @throws \Yaoi\Sql\Exception
      */
     public function expr($expression = null, $binds = null)
     {
@@ -233,7 +234,7 @@ class Database extends Service implements DatabaseContract
     /**
      * @param $tableName
      * @return Table
-     * @throws Database\Exception
+     * @throws \Yaoi\Database\Exception
      */
     public function getTableDefinition($tableName)
     {
