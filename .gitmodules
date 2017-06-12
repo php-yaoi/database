@@ -1,4 +1,0 @@
-[submodule "php-yaoi"]
-	path = src
-	url = https://github.com/vearutop/php-yaoi
-	branch = master
