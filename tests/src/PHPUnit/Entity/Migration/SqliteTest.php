@@ -41,8 +41,8 @@ CREATE TABLE `yaoi_database_tests_helper_entity_user` (
 CREATE INDEX `yaoi_database_tests_helper_entity_user_key_age` ON `yaoi_database_tests_helper_entity_user` (`age`);
 INSERT INTO `yaoi_database_tests_helper_entity_user` (`id`, `name`) SELECT `id`, `name` FROM _temp_table;
 DROP TABLE _temp_table;
-# Dependent tables found: yaoi_tests_entity_host
-# Apply, table yaoi_tests_entity_host (Yaoi\Database\Tests\Helper\Entity\Host) is up to date
+# Dependent tables found: yaoi_database_tests_entity_host
+# Apply, table yaoi_database_tests_entity_host (Yaoi\Database\Tests\Helper\Entity\Host) is up to date
 # OK
 No action (up to date) expected
 # Apply, table yaoi_database_tests_helper_entity_user (Yaoi\Database\Tests\Helper\Entity\User) is up to date
@@ -61,8 +61,8 @@ CREATE INDEX `yaoi_database_tests_helper_entity_user_key_age` ON `yaoi_database_
 CREATE UNIQUE INDEX `yaoi_database_tests_helper_entity_user_unique_last_name_first_name` ON `yaoi_database_tests_helper_entity_user` (`last_name`, `first_name`);
 INSERT INTO `yaoi_database_tests_helper_entity_user` (`id`, `age`) SELECT `id`, `age` FROM _temp_table;
 DROP TABLE _temp_table;
-# Dependent tables found: yaoi_tests_entity_session
-# Apply, table yaoi_tests_entity_session (Yaoi\Database\Tests\Helper\Entity\Session) is up to date
+# Dependent tables found: yaoi_database_tests_entity_session
+# Apply, table yaoi_database_tests_entity_session (Yaoi\Database\Tests\Helper\Entity\Session) is up to date
 # OK
 No action (up to date) expected
 # Apply, table yaoi_database_tests_helper_entity_user (Yaoi\Database\Tests\Helper\Entity\User) is up to date
