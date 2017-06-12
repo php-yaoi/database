@@ -1,0 +1,37 @@
+{
+  "name": "yaoi/database",
+  "type": "library",
+  "description": "Database abstraction layer for PHP",
+  "keywords": ["framework"],
+  "homepage": "https://github.com/php-yaoi/database",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Viacheslav Poturaev",
+      "email": "vearutop@gmail.com",
+      "homepage": "https://github.com/vearutop"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "php-yaoi/php-yaoi": "^1.0|dev-master",
+    "swaggest/json-schema": "^0.4.0"
+  },
+  "require-dev": {
+    "codeclimate/php-test-reporter": "0.1.2",
+    "phpunit/phpunit": "4.8.23"
+  },
+  "autoload": {
+    "psr-4": {
+      "Yaoi\\Database\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Yaoi\\Database\\Tests\\": "tests/src/"
+    }
+  },
+  "scripts": {
+    "test": "php -dxdebug.coverage_enable=1 ./vendor/bin/phpunit --coverage-text"
+  }
+}
