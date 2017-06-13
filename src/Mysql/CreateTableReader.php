@@ -209,7 +209,7 @@ class CreateTableReader extends BaseClass
             $columnName = $this->resolve($columnName);
         }
 
-        $ons = $parser->inner()->explode('ON ');
+        $ons = $parser->inner()->explode(' ON '); // TODO use \s here
         $onUpdate = $onDelete = null;
         if (count($ons) > 1) {
             unset($ons[0]);

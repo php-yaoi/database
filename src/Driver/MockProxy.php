@@ -4,6 +4,7 @@ namespace Yaoi\Database\Driver;
 use Yaoi\Database\Driver;
 use Yaoi\Mock;
 use Yaoi\Mock\DataSetCapture;
+use Yaoi\Sql\Symbol;
 
 class MockProxy extends Driver
 {
@@ -150,6 +151,11 @@ class MockProxy extends Driver
         return $this->mock->get('utility', function() use ($driver) {
             return $driver->getUtility();
         });
+    }
+
+    public function quoteSymbol(Symbol $symbol)
+    {
+        return $this->driver->quoteSymbol($symbol);
     }
 
 

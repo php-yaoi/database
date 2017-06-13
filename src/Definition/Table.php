@@ -188,6 +188,20 @@ class Table extends BaseClass
         return $this;
     }
 
+    public function removeForeignKey(ForeignKey $remove) {
+        foreach ($this->foreignKeys as $name => $foreignKey) {
+            if ($foreignKey === $remove) {
+                unset($this->foreignKeys[$name]);
+            }
+        }
+        foreach ($this->columnForeignKeys as $name => $foreignKey) {
+            if ($foreignKey === $remove) {
+                unset($this->columnForeignKeys[$name]);
+            }
+        }
+        return $this;
+    }
+
 
 
     private $databaseId;
@@ -202,7 +216,7 @@ class Table extends BaseClass
 
     /**
      * @return CreateTable
-     * @throws Database\Exception
+     * @throws Exception
      */
     public function getCreateTable() {
         return $this->database()->getUtility()->generateCreateTableOnDefinition($this);

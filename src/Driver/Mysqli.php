@@ -130,12 +130,26 @@ class Mysqli extends Driver implements Driver\Contract
         if (null === $this->mysqli) {
             $this->connect();
         }
-        return $this->mysqli->query($statement);
+        $result = $this->mysqli->query($statement);
+        if (!$result instanceof \mysqli_result) {
+            throw new Database\Exception($this->queryErrorMessage($result), Database\Exception::QUERY_ERROR);
+        }
+
+        return $result;
     }
 
     public function __destruct()
     {
-        $this->disconnect();
+        if ($this->objectHash === spl_object_hash($this)) {
+            $this->disconnect();
+        }
+    }
+
+    private $objectHash;
+    public function __construct(Database\Settings $dsn)
+    {
+        $this->objectHash = spl_object_hash($this);
+        parent::__construct($dsn);
     }
 
 
