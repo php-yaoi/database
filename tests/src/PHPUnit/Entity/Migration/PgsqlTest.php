@@ -40,7 +40,7 @@ CREATE INDEX "key_age" ON "yaoi_database_tests_helper_entity_user" ("age");
 # Dependent tables found: yaoi_tests_host
 # Apply, table yaoi_tests_host (Yaoi\Database\Tests\Helper\Entity\Host) is up to date
 ALTER TABLE "yaoi_database_tests_helper_entity_user"
-ADD CONSTRAINT "k432f6fb01e8766435a432e5ed8ffb2ef" FOREIGN KEY ("host_id") REFERENCES "yaoi_tests_host" ("id");
+ADD CONSTRAINT "k47c117bc52f0210fe108cc481854b833" FOREIGN KEY ("host_id") REFERENCES "yaoi_tests_host" ("id");
 # OK
 No action (up to date) expected
 # Apply, table yaoi_database_tests_helper_entity_user (Yaoi\Database\Tests\Helper\Entity\User) is up to date
@@ -52,12 +52,12 @@ ADD COLUMN "first_name" varchar(255) NOT NULL,
 ADD COLUMN "last_name" varchar(255) NOT NULL,
 DROP COLUMN "name",
 DROP COLUMN "host_id",
-DROP CONSTRAINT IF EXISTS "k432f6fb01e8766435a432e5ed8ffb2ef";
+DROP CONSTRAINT IF EXISTS "k47c117bc52f0210fe108cc481854b833";
 CREATE UNIQUE INDEX "unique_last_name_first_name" ON "yaoi_database_tests_helper_entity_user" ("last_name", "first_name");
 # Dependent tables found: yaoi_tests_session
 # Apply, table yaoi_tests_session (Yaoi\Database\Tests\Helper\Entity\Session) is up to date
 ALTER TABLE "yaoi_database_tests_helper_entity_user"
-ADD CONSTRAINT "k42405537c0e04845e2902c8a7fb322be" FOREIGN KEY ("session_id") REFERENCES "yaoi_tests_session" ("id");
+ADD CONSTRAINT "kafec223e64a3bb12508718274f678a92" FOREIGN KEY ("session_id") REFERENCES "yaoi_tests_session" ("id");
 # OK
 No action (up to date) expected
 # Apply, table yaoi_database_tests_helper_entity_user (Yaoi\Database\Tests\Helper\Entity\User) is up to date
@@ -116,7 +116,7 @@ CREATE INDEX "key_age" ON "yaoi_database_tests_helper_entity_user" ("age");
 # Dependent tables found: yaoi_tests_host
 # Apply, table yaoi_tests_host (Yaoi\Database\Tests\Helper\Entity\Host) is up to date
 ALTER TABLE "yaoi_database_tests_helper_entity_user"
-ADD CONSTRAINT "k432f6fb01e8766435a432e5ed8ffb2ef" FOREIGN KEY ("host_id") REFERENCES "yaoi_tests_host" ("id");
+ADD CONSTRAINT "k47c117bc52f0210fe108cc481854b833" FOREIGN KEY ("host_id") REFERENCES "yaoi_tests_host" ("id");
 # OK
 No action (up to date) expected
 # Apply, table yaoi_database_tests_helper_entity_user (Yaoi\Database\Tests\Helper\Entity\User) is up to date
@@ -173,7 +173,7 @@ CREATE INDEX "key_age" ON "yaoi_database_tests_helper_entity_user" ("age");
 # Dependent tables found: yaoi_tests_session
 # Apply, table yaoi_tests_session (Yaoi\Database\Tests\Helper\Entity\Session) is up to date
 ALTER TABLE "yaoi_database_tests_helper_entity_user"
-ADD CONSTRAINT "k42405537c0e04845e2902c8a7fb322be" FOREIGN KEY ("session_id") REFERENCES "yaoi_tests_session" ("id");
+ADD CONSTRAINT "kafec223e64a3bb12508718274f678a92" FOREIGN KEY ("session_id") REFERENCES "yaoi_tests_session" ("id");
 # OK
 No action (up to date) expected
 # Apply, table yaoi_database_tests_helper_entity_user (Yaoi\Database\Tests\Helper\Entity\User) is up to date

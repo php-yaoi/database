@@ -1,7 +1,6 @@
 <?php
 namespace Yaoi\Database;
 
-use Yaoi\Database;
 use Yaoi\DependencyRepository;
 use Yaoi\Log;
 use Yaoi\Sql\Expression;
@@ -62,7 +61,7 @@ class Query implements \Iterator
                 $log = DependencyRepository::get($this->logResourceId);
                 $log->push('(-1) ' . $query . "\n: " . $error . ' ' . $query, Log::TYPE_ERROR);
             }
-            $exception = new Database\Exception($error, Database\Exception::QUERY_ERROR);
+            $exception = new Exception($error, Exception::QUERY_ERROR);
             $exception->query = $query;
             throw $exception;
         }
@@ -89,11 +88,11 @@ class Query implements \Iterator
 
         $result = array();
 
-        if ($keyField instanceof Database\Definition\Column) {
+        if ($keyField instanceof Definition\Column) {
             $keyField = $keyField->schemaName;
         }
 
-        if ($valueField instanceof Database\Definition\Column) {
+        if ($valueField instanceof Definition\Column) {
             $valueField = $valueField->schemaName;
         }
 
@@ -151,11 +150,11 @@ class Query implements \Iterator
 
         $result = array();
 
-        if ($key instanceof Database\Definition\Column) {
+        if ($key instanceof Definition\Column) {
             $key = $key->schemaName;
         }
 
-        if ($value instanceof Database\Definition\Column) {
+        if ($value instanceof Definition\Column) {
             $value = $value->schemaName;
         }
 
