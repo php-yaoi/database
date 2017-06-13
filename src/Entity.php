@@ -2,15 +2,14 @@
 
 namespace Yaoi\Database;
 
-use Yaoi\Database\Definition\Table;
+use Yaoi\BaseClass;
+use Yaoi\Database\Definition\Column;
 use Yaoi\Database\Definition\Index;
+use Yaoi\Database\Definition\Table;
 use Yaoi\Mappable;
 use Yaoi\Sql\SelectInterface;
 use Yaoi\Sql\SimpleExpression;
-use Yaoi\Sql\Statement;
 use Yaoi\Sql\Symbol;
-use Yaoi\BaseClass;
-use Yaoi\Database\Definition\Column;
 use Yaoi\String\Utils;
 use Yaoi\Undefined;
 

@@ -3,8 +3,8 @@
 namespace Yaoi\Database\Tests\PHPUnit\Entity\Migration;
 
 
-use Yaoi\Log;
 use Yaoi\Database\Tests\Helper\Entity\OneABBR;
+use Yaoi\Log;
 
 class MysqlTest extends BaseTest
 {

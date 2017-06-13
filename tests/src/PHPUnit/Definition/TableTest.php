@@ -9,8 +9,8 @@
 namespace Yaoi\Database\Tests\PHPUnit\Definition;
 
 use Yaoi\Database\Definition\ForeignKey;
-use Yaoi\Test\PHPUnit\TestCase;
 use Yaoi\Database\Tests\Helper\Entity\Session;
+use Yaoi\Test\PHPUnit\TestCase;
 
 class TableTest extends TestCase
 {

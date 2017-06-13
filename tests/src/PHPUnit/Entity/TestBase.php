@@ -4,20 +4,20 @@ namespace Yaoi\Database\Tests\PHPUnit\Entity;
 use Yaoi\Database\Definition\Column;
 use Yaoi\Database\Definition\Table;
 use Yaoi\Database\Exception;
+use Yaoi\Database\Tests\Helper\Entity\Host;
+use Yaoi\Database\Tests\Helper\Entity\OneABBR;
+use Yaoi\Database\Tests\Helper\Entity\Session;
+use Yaoi\Database\Tests\Helper\Entity\SessionTag;
+use Yaoi\Database\Tests\Helper\Entity\Tag;
+use Yaoi\Database\Tests\Helper\Entity\TestEmptyInsert;
+use Yaoi\Database\Tests\Helper\Entity\Two;
+use Yaoi\Database\Tests\Helper\Entity\User;
 use Yaoi\Log;
 use Yaoi\Migration\Manager;
 use Yaoi\Migration\Migration;
 use Yaoi\Sql\Expression;
 use Yaoi\Sql\SimpleExpression;
 use Yaoi\Undefined;
-use Yaoi\Database\Tests\Helper\Entity\Host;
-use Yaoi\Database\Tests\Helper\Entity\Session;
-use Yaoi\Database\Tests\Helper\Entity\SessionTag;
-use Yaoi\Database\Tests\Helper\Entity\Tag;
-use Yaoi\Database\Tests\Helper\Entity\OneABBR;
-use Yaoi\Database\Tests\Helper\Entity\TestEmptyInsert;
-use Yaoi\Database\Tests\Helper\Entity\Two;
-use Yaoi\Database\Tests\Helper\Entity\User;
 
 abstract class TestBase extends \Yaoi\Test\PHPUnit\TestCase
 {

@@ -3,7 +3,6 @@ namespace Yaoi\Database\Tests\PHPUnit;
 
 use Yaoi\Database;
 use Yaoi\Test\PHPUnit\TestCase;
-use Yaoi\App;
 
 class BindsTest extends TestCase
 {

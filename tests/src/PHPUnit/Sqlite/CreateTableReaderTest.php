@@ -4,10 +4,10 @@ namespace Yaoi\Database\Tests\PHPUnit\Sqlite;
 
 
 use Yaoi\Database\Database;
-use Yaoi\Log;
-use Yaoi\Test\PHPUnit\TestCase;
 use Yaoi\Database\Tests\Helper\Entity\Host;
 use Yaoi\Database\Tests\Helper\Entity\Session;
+use Yaoi\Log;
+use Yaoi\Test\PHPUnit\TestCase;
 
 class CreateTableReaderTest extends TestCase
 {

@@ -4,7 +4,6 @@ namespace Yaoi\Database\Tests\PHPUnit;
 use Yaoi\Database\Database;
 use Yaoi\Database\Definition\Column;
 use Yaoi\Test\PHPUnit\TestCase;
-use Yaoi\App;
 
 /**
  * Class DatabaseBasicTest

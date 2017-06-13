@@ -1,9 +1,9 @@
 <?php
 
+use Yaoi\Database\Database;
 use Yaoi\Log;
 use Yaoi\Migration;
 use Yaoi\Storage\PhpVar;
-use Yaoi\Database\Database;
 
 
 Database::register('mysqli://root@localhost/test1', Yaoi\Service::PRIMARY);

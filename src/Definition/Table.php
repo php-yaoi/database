@@ -7,9 +7,7 @@ use Yaoi\Database\Contract;
 use Yaoi\Database\Database;
 use Yaoi\Database\Entity\Migration;
 use Yaoi\DependencyRepository;
-use Yaoi\Log;
 use Yaoi\Sql\CreateTable;
-use Yaoi\String\Utils;
 
 class Table extends BaseClass
 {

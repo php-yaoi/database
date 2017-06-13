@@ -8,7 +8,6 @@ use Yaoi\Mock;
 use Yaoi\Storage;
 use Yaoi\Storage\PhpVar;
 use Yaoi\Test\PHPUnit\TestCase;
-use Yaoi\App;
 
 class MockTest extends TestCase
 {

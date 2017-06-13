@@ -5,8 +5,8 @@ namespace Yaoi\Database\Tests\PHPUnit\Mysql;
 
 use Yaoi\Database\Database;
 use Yaoi\Database\Mysql\CreateTableReader;
-use Yaoi\Test\PHPUnit\TestCase;
 use Yaoi\Database\Tests\Helper\CheckAvailable;
+use Yaoi\Test\PHPUnit\TestCase;
 
 class CreateTableReaderTest extends TestCase
 {

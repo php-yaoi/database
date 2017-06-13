@@ -3,12 +3,12 @@
 namespace Yaoi\Database\Tests\PHPUnit\Entity\Migration;
 
 use Yaoi\Database;
-use Yaoi\Log;
-use Yaoi\Test\PHPUnit\TestCase;
 use Yaoi\Database\Tests\Helper\CheckAvailable;
 use Yaoi\Database\Tests\Helper\Entity\Host;
 use Yaoi\Database\Tests\Helper\Entity\Session;
 use Yaoi\Database\Tests\Helper\Entity\User;
+use Yaoi\Log;
+use Yaoi\Test\PHPUnit\TestCase;
 
 abstract class BaseTest extends TestCase
 {

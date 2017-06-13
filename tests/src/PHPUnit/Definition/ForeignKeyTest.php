@@ -3,10 +3,10 @@
 namespace Yaoi\Database\Tests\PHPUnit\Definition;
 
 use Yaoi\Database\Definition\ForeignKey;
-use Yaoi\Test\PHPUnit\TestCase;
 use Yaoi\Database\Tests\Helper\Entity\Session;
 use Yaoi\Database\Tests\Helper\Entity\SessionTag;
 use Yaoi\Database\Tests\Helper\Entity\Tag;
+use Yaoi\Test\PHPUnit\TestCase;
 
 class ForeignKeyTest extends TestCase
 {

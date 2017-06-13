@@ -1,21 +1,18 @@
 <?php
 namespace Yaoi\Database;
 
+use Yaoi\Database\Contract as DatabaseContract;
 use Yaoi\Database\Definition\Table;
 use Yaoi\Database\Driver\MockProxy;
-use Yaoi\Database\Exception;
-use Yaoi\Database\Settings;
-use Yaoi\Database\Contract as DatabaseContract;
-use Yaoi\Database\Query;
 use Yaoi\Log;
-use Yaoi\Mock;
 use Yaoi\Mappable\Contract;
+use Yaoi\Mock;
 use Yaoi\Service;
 use Yaoi\Sql\Batch;
 use Yaoi\Sql\DeleteInterface;
-use Yaoi\Sql\SimpleExpression;
 use Yaoi\Sql\InsertInterface;
 use Yaoi\Sql\SelectInterface;
+use Yaoi\Sql\SimpleExpression;
 use Yaoi\Sql\Statement;
 use Yaoi\Sql\UpdateInterface;
 

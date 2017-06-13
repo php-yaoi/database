@@ -3,7 +3,6 @@
 namespace Yaoi\Database\Tests\PHPUnit\Pgsql;
 
 use Yaoi\Database;
-use Yaoi\Database\Tests\PHPUnit\Pgsql\PgsqlTest;
 
 class PdoPgsqlTest extends PgsqlTest
 {

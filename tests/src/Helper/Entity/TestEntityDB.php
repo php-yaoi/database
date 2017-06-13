@@ -3,7 +3,6 @@ namespace Yaoi\Database\Tests\Helper\Entity;
 
 use Yaoi\Database\Definition\Column;
 use Yaoi\Database\Entity;
-use Yaoi\Database;
 
 /**
  * Class TestEntityDB

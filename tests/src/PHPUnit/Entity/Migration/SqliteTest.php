@@ -4,8 +4,6 @@ namespace Yaoi\Database\Tests\PHPUnit\Entity\Migration;
 
 
 use Yaoi\Database;
-use Yaoi\Database\Tests\Helper\CheckAvailable;
-use Yaoi\Database\Tests\PHPUnit\Entity\Migration\BaseTest;
 
 class SqliteTest extends BaseTest
 {
