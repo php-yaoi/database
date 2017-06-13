@@ -23,7 +23,7 @@ SQL;
     protected function setUp()
     {
         \Yaoi\Database\Tests\Helper\CheckAvailable::getPgsql();
-        $this->db = Database::getInstance('test_pgsql');
+        $this->db = Database\Database::getInstance('test_pgsql');
     }
 
     protected $createTable2 = <<<SQL

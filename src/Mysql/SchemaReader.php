@@ -13,7 +13,7 @@ class SchemaReader
     const _PRIMARY = 'PRIMARY';
 
     /**
-     * @var Database
+     * @var Database\Database
      */
     protected $database;
 

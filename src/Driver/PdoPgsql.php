@@ -129,7 +129,7 @@ class PdoPgsql extends Driver
 
     public function getDialect()
     {
-        return Database::DIALECT_POSTGRESQL;
+        return Database\Database::DIALECT_POSTGRESQL;
     }
 
     /**

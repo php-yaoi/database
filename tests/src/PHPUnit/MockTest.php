@@ -25,7 +25,7 @@ class MockTest extends TestCase
 
     public function testBase()
     {
-        $db = App::database('test_mysqli');
+        $db = \Yaoi\Database\Database::getInstance('test_mysqli');
         $storage = new Storage('php-var://dummy/?staticPropertyRef=MockTest::$testOne');
         $mockSet = new Mock($storage, Mock::MODE_CAPTURE);
         $db->mock($mockSet);
@@ -62,7 +62,7 @@ class MockTest extends TestCase
 
     public function testMockSwitch()
     {
-        $db = Database::getInstance('test_mysqli');
+        $db = Database\Database::getInstance('test_mysqli');
 
         $db->mock();
         $this->assertFalse($db->getDriver() instanceof MockProxy);

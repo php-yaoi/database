@@ -28,7 +28,7 @@ class Host extends Entity
      */
     static function setUpTable(\Yaoi\Database\Definition\Table $table, $columns)
     {
-        $table->setSchemaName('yaoi_tests_entity_host');
+        $table->setSchemaName('yaoi_tests_host');
 
         // no op
     }

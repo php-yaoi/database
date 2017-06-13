@@ -10,7 +10,7 @@ use Yaoi\Database\Definition\Index;
 class SchemaReader
 {
     /**
-     * @var Database
+     * @var Database\Database
      */
     private $database;
 

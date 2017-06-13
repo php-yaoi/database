@@ -271,4 +271,10 @@ class Database extends Service implements DatabaseContract
         return $this->settings->path;
     }
 
+    protected function getDriverNamespace()
+    {
+        return __NAMESPACE__ . '\\Driver\\';
+    }
+
+
 }

@@ -114,7 +114,7 @@ class Sqlite extends Driver
 
     public function getDialect()
     {
-        return Database::DIALECT_SQLITE;
+        return Database\Database::DIALECT_SQLITE;
     }
 
     /**

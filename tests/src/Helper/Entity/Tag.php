@@ -29,7 +29,7 @@ class Tag extends Entity
      */
     static function setUpTable(\Yaoi\Database\Definition\Table $table, $columns)
     {
-        $table->setSchemaName('yaoi_tests_entity_tag');
+        $table->setSchemaName('yaoi_tests_tag');
 
     }
 

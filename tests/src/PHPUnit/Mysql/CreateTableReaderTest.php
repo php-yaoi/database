@@ -3,7 +3,8 @@
 namespace Yaoi\Database\Tests\PHPUnit\Mysql;
 
 
-use Yaoi\Database;
+use Yaoi\Database\Database;
+use Yaoi\Database\Mysql\CreateTableReader;
 use Yaoi\Test\PHPUnit\TestCase;
 use Yaoi\Database\Tests\Helper\CheckAvailable;
 
@@ -38,7 +39,7 @@ class CreateTableReaderTest extends TestCase
 )";
 
     public function testColumns() {
-        $definition = Database\Mysql\CreateTableReader::create($this->createTableStatement, $this->database)->getDefinition();
+        $definition = CreateTableReader::create($this->createTableStatement, $this->database)->getDefinition();
         $this->assertSame($this->createTableStatement, (string)$this->database->getUtility()->generateCreateTableOnDefinition($definition));
     }
 }

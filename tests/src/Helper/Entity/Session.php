@@ -34,7 +34,7 @@ class Session extends Entity
     static function setUpTable(\Yaoi\Database\Definition\Table $table, $columns)
     {
         $table
-            ->setSchemaName('yaoi_tests_entity_session')
+            ->setSchemaName('yaoi_tests_session')
             ->getForeignKeyByColumn($columns->hostId)
             ->setOnDelete(ForeignKey::CASCADE)
             ->setOnUpdate(ForeignKey::CASCADE);

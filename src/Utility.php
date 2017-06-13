@@ -4,7 +4,6 @@ namespace Yaoi\Database;
 
 use Yaoi\Database\Utility\Contract as UtilityContract;
 use Yaoi\BaseClass;
-use Yaoi\Database;
 use Yaoi\Sql\Raw;
 use Yaoi\Sql\SimpleExpression;
 use Yaoi\Sql\Symbol;
@@ -56,7 +55,7 @@ abstract class Utility extends BaseClass implements UtilityContract
     }
 
 
-    public function generateForeignKeyExpression(Database\Definition\ForeignKey $foreignKey) {
+    public function generateForeignKeyExpression(Definition\ForeignKey $foreignKey) {
         return new SimpleExpression(' CONSTRAINT ? FOREIGN KEY (?) REFERENCES ? (?)??',
             new Symbol($foreignKey->getName()),
             Symbol::prepareColumns($foreignKey->getLocalColumns()),

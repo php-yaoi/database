@@ -3,7 +3,8 @@
 namespace Yaoi\Database\Tests\Helper;
 
 
-use Yaoi\Database;
+use Yaoi\Database\Database;
+use Yaoi\Database\Exception;
 
 class CheckAvailable
 {
@@ -14,7 +15,7 @@ class CheckAvailable
         try {
             Database::getInstance('test_mysqli')->query("SELECT VERSION()")->fetchRow();
         }
-        catch (Database\Exception $e) {
+        catch (Exception $e) {
             throw new \PHPUnit_Framework_SkippedTestError($e->getMessage());
         }
         return Database::getInstance('test_mysqli');

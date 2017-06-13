@@ -13,7 +13,7 @@ class MysqliTest extends TestUnified
     public function setUp()
     {
         \Yaoi\Database\Tests\Helper\CheckAvailable::getMysqli();
-        $this->db = Database::getInstance('test_mysqli');
+        $this->db = Database\Database::getInstance('test_mysqli');
     }
 
 

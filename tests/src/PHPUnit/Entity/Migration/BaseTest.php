@@ -7,13 +7,12 @@ use Yaoi\Log;
 use Yaoi\Test\PHPUnit\TestCase;
 use Yaoi\Database\Tests\Helper\CheckAvailable;
 use Yaoi\Database\Tests\Helper\Entity\Host;
-use Yaoi\Database\Tests\Helper\Entity\OneABBR;
 use Yaoi\Database\Tests\Helper\Entity\Session;
 use Yaoi\Database\Tests\Helper\Entity\User;
 
 abstract class BaseTest extends TestCase
 {
-    /** @var  Database */
+    /** @var  Database\Database */
     protected $database;
 
     public function setUp() {

@@ -2,7 +2,7 @@
 
 namespace Yaoi\Database\Utility;
 
-use Yaoi\Database;
+use Yaoi\Database\Database;
 use Yaoi\Database\Definition;
 use Yaoi\Database\Definition\Column;
 use Yaoi\Database\Definition\Table;

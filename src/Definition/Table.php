@@ -3,7 +3,9 @@
 namespace Yaoi\Database\Definition;
 
 use Yaoi\BaseClass;
-use Yaoi\Database;
+use Yaoi\Database\Contract;
+use Yaoi\Database\Database;
+use Yaoi\Database\Entity\Migration;
 use Yaoi\DependencyRepository;
 use Yaoi\Log;
 use Yaoi\Sql\CreateTable;
@@ -36,10 +38,10 @@ class Table extends BaseClass
     /**
      * Table constructor.
      * @param \stdClass|null $columns @deprecated
-     * @param Database\Contract|null $database
+     * @param Contract|null $database
      * @param $schemaName
      */
-    public function __construct(\stdClass $columns = null, Database\Contract $database = null, $schemaName) {
+    public function __construct(\stdClass $columns = null, Contract $database = null, $schemaName) {
         $this->schemaName = $schemaName;
         $this->databaseId = DependencyRepository::add($database);
         $this->columns = new Columns($this);
@@ -218,12 +220,12 @@ class Table extends BaseClass
         foreach ($this->getForeignKeys() as $foreignKey) {
             $referencedTable = $foreignKey->getReferencedTable();
             $referencedTable->dependentTables[$this->schemaName] = $this;
-            Database\Entity\Migration::$dependenciesApply[$this->schemaName][$referencedTable->schemaName]
+            Migration::$dependenciesApply[$this->schemaName][$referencedTable->schemaName]
                 = $referencedTable->schemaName;
-            Database\Entity\Migration::$dependenciesRollback[$referencedTable->schemaName][$this->schemaName]
+            Migration::$dependenciesRollback[$referencedTable->schemaName][$this->schemaName]
                 = $this->schemaName;
         }
-        return new Database\Entity\Migration($this);
+        return new Migration($this);
     }
 
 

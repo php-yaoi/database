@@ -158,7 +158,7 @@ class Mysqli extends Driver implements Driver\Contract
 
     public function getDialect()
     {
-        return Database::DIALECT_MYSQL;
+        return Database\Database::DIALECT_MYSQL;
     }
 
     /**

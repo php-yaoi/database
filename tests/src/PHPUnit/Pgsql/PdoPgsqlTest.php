@@ -20,7 +20,7 @@ class PdoPgsqlTest extends PgsqlTest
         }
 
         try {
-            $this->db = Database::getInstance('test_pdo_pgsql');
+            $this->db = Database\Database::getInstance('test_pdo_pgsql');
         } catch (\Yaoi\Service\Exception $exception) {
             $this->markTestSkipped($exception->getMessage());
         }

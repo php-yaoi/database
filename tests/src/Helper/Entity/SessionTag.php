@@ -32,7 +32,7 @@ class SessionTag extends Entity
     static function setUpTable(\Yaoi\Database\Definition\Table $table, $columns)
     {
         $table
-            ->setSchemaName('yaoi_tests_entity_session_tag')
+            ->setSchemaName('yaoi_tests_session_tag')
             ->disableDatabaseForeignKeys()
             ->setPrimaryKey($columns->sessionId, $columns->tagId);
     }

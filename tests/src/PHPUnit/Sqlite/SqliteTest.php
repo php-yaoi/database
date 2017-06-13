@@ -48,7 +48,7 @@ SQL;
     public function setUp()
     {
         $this->dbFileName = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'testSqlite.sqlite';
-        $this->db = new Database('sqlite:///' . $this->dbFileName);
+        $this->db = new Database\Database('sqlite:///' . $this->dbFileName);
 
     }
 

@@ -1,7 +1,7 @@
 <?php
 namespace Yaoi\Database\Tests\PHPUnit\Sqlite;
 
-use Yaoi\Database;
+use Yaoi\Database\Database;
 use Yaoi\Database\Definition\Column;
 use Yaoi\Test\PHPUnit\TestCase;
 

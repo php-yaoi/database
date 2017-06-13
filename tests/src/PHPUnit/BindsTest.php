@@ -14,7 +14,7 @@ class BindsTest extends TestCase
 
     public function testUnnamedBinds()
     {
-        $db = App::database('test_mysqli')->mock();
+        $db = Database\Database::getInstance('test_mysqli')->mock();
 
         $expected = 'SELECT 1, \'two\', NULL, 0.445453';
         $this->assertSame($expected, $db->query("SELECT ?, ?, ?, ?", 1, 'two', null, 0.445453)->skipAutoExecute()->build());
@@ -37,7 +37,7 @@ class BindsTest extends TestCase
     public function testDestruct()
     {
         return;
-        $db = Database::create(Database::$instanceConfig['test_mysqli'])->query("SHOW TABLES");
+        $db = Database\Database::create(Database\Database::$instanceConfig['test_mysqli'])->query("SHOW TABLES");
         unset($db);
 
 

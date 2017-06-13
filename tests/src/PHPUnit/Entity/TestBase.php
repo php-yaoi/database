@@ -21,7 +21,7 @@ use Yaoi\Database\Tests\Helper\Entity\User;
 
 abstract class TestBase extends \Yaoi\Test\PHPUnit\TestCase
 {
-    /** @var  \Yaoi\Database */
+    /** @var  \Yaoi\Database\Database */
     protected $database;
 
     protected $expectedMigrateLog;
@@ -155,13 +155,13 @@ abstract class TestBase extends \Yaoi\Test\PHPUnit\TestCase
 
 
     protected $expectedBindsStatement = <<<SQL
-SELECT `yaoi_database_tests_entity_tag`.`id`, `yaoi_database_tests_entity_tag`.`name`
-FROM `yaoi_database_tests_entity_host`
-LEFT JOIN `yaoi_database_tests_entity_session` ON `yaoi_database_tests_entity_session`.`host_id` = `yaoi_database_tests_entity_host`.`id`
-LEFT JOIN `yaoi_database_tests_entity_session_tag` ON `yaoi_database_tests_entity_session`.`id` = `yaoi_database_tests_entity_session_tag`.`session_id`
-LEFT JOIN `yaoi_database_tests_entity_tag` ON `yaoi_database_tests_entity_tag`.`id` = `yaoi_database_tests_entity_session_tag`.`tag_id`
-WHERE `yaoi_database_tests_entity_host`.`id` = 12
-GROUP BY `yaoi_database_tests_entity_tag`.`id`
+SELECT `yaoi_tests_tag`.`id`, `yaoi_tests_tag`.`name`
+FROM `yaoi_tests_host`
+LEFT JOIN `yaoi_tests_session` ON `yaoi_tests_session`.`host_id` = `yaoi_tests_host`.`id`
+LEFT JOIN `yaoi_tests_session_tag` ON `yaoi_tests_session`.`id` = `yaoi_tests_session_tag`.`session_id`
+LEFT JOIN `yaoi_tests_tag` ON `yaoi_tests_tag`.`id` = `yaoi_tests_session_tag`.`tag_id`
+WHERE `yaoi_tests_host`.`id` = 12
+GROUP BY `yaoi_tests_tag`.`id`
 SQL;
 
     public function testEmbeddedExpr()
@@ -170,7 +170,7 @@ SQL;
         $res = $expr->build($this->database->getDriver());
         //print_r($expr);
         //var_dump($res);
-        $this->assertSame('`yaoi_database_tests_entity_tag`.`id`, `yaoi_database_tests_entity_tag`.`name`', $res);
+        $this->assertSame('`yaoi_tests_tag`.`id`, `yaoi_tests_tag`.`name`', $res);
     }
 
     public function testSelectColumns()
@@ -180,7 +180,7 @@ SQL;
             ->bindResultClass(Tag::className());
 
         $this->assertSame(
-            "SELECT `yaoi_database_tests_entity_tag`.`id`, `yaoi_database_tests_entity_tag`.`name` FROM `yaoi_database_tests_entity_host`",
+            "SELECT `yaoi_tests_tag`.`id`, `yaoi_tests_tag`.`name` FROM `yaoi_tests_host`",
             $select->build());
     }
 

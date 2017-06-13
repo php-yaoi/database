@@ -2,7 +2,6 @@
 
 namespace Yaoi\Database;
 
-use Yaoi\Database;
 use Yaoi\Database\Definition\Table;
 use Yaoi\Database\Definition\Index;
 use Yaoi\Mappable;

@@ -1,7 +1,7 @@
 <?php
 namespace Yaoi\Database\Tests\PHPUnit;
 
-use Yaoi\Database;
+use Yaoi\Database\Database;
 use Yaoi\Database\Definition\Column;
 use Yaoi\Test\PHPUnit\TestCase;
 use Yaoi\App;
@@ -43,7 +43,7 @@ class Test extends TestCase
             );
         */
 
-        $database = App::database('test_mysqli')->mock();
+        $database = \Yaoi\Database\Database::getInstance('test_mysqli')->mock();
         $database->query("DROP TABLE IF EXISTS test1");
         $database->query("CREATE TABLE test1 (id integer unsigned auto_increment, PRIMARY KEY(id)) ENGINE=InnoDB");
         $database->query("INSERT INTO test1 (id) VALUES (1),(2),(3)");
